@@ -29,7 +29,7 @@ Each milestone's dependency list refers only to earlier milestones. Source point
 
 **Central question.** What does a finite matrix describe in this problem, and what is special about a reflection?
 
-**Understanding target.** Explain a density matrix as a positive, trace-one description of a state; read $`\operatorname{Tr}(\rho O)`$ as an observable expectation; and distinguish state mixtures from coherent superpositions. Recognize that a Hermitian unitary $`U`$ has eigenvalues $`\pm1`$ and satisfies $`U^2=I`$. Interpret the operator norm as the largest output norm from a unit input, and $`\|U-V\|_{\mathrm{op}}`$ as the largest difference between the two actions on such an input.
+**Understanding target.** Explain a density matrix as a positive, trace-one description of a state; read $`\mathrm{Tr}(\rho O)`$ as an observable expectation; and distinguish state mixtures from coherent superpositions. Recognize that a Hermitian unitary $`U`$ has eigenvalues $`\pm1`$ and satisfies $`U^2=I`$. Interpret the operator norm as the largest output norm from a unit input, and $`\|U-V\|_{\mathrm{op}}`$ as the largest difference between the two actions on such an input.
 
 **Dependencies and story role.** No earlier milestone. This supplies the local objects from which the noise operator, state evolution, and measurable output will be built.
 
@@ -71,7 +71,7 @@ Each milestone's dependency list refers only to earlier milestones. Source point
 **Understanding target.** Use the adjoint relation
 
 ```math
-\operatorname{Tr}(\Phi(\rho)O)=\operatorname{Tr}(\rho\,\Phi^\dagger(O)).
+\mathrm{Tr}(\Phi(\rho)O)=\mathrm{Tr}(\rho\,\Phi^\dagger(O)).
 ```
 
 Explain why a trace-preserving channel has a unital adjoint and why an observable propagated through all future operations describes the eventual readout at an earlier time. Keep the composition order of the controls consistent in the two descriptions.
@@ -138,7 +138,7 @@ Keep the logarithm conversion separate from the choice of full trace norm.
 
 **Central question.** How does repeated random application of a reflection generate continuous-time dephasing?
 
-**Understanding target.** Read $`\mathcal L_U=\operatorname{Ad}_U-\mathrm{Id}`$ as a rate-one random-jump generator and explain the Poisson count of jumps over a duration. Use $`U^2=I`$ to reduce an uninterrupted interval to an even/odd mixture. Distinguish total jump rate one from the coherence-decay rate two and, for several local jumps, from the rate experienced by each site.
+**Understanding target.** Read $`\mathcal L_U=\mathrm{Ad}_U-\mathrm{Id}`$ as a rate-one random-jump generator and explain the Poisson count of jumps over a duration. Use $`U^2=I`$ to reduce an uninterrupted interval to an even/odd mixture. Distinguish total jump rate one from the coherence-decay rate two and, for several local jumps, from the rate experienced by each site.
 
 **Dependencies and story role.** Requires M01 and M03. It supplies the concrete noise model rather than assuming a general open-system theory.
 
@@ -151,11 +151,11 @@ Keep the logarithm conversion separate from the choice of full trace norm.
 
 **Central question.** What information and resources are supplied by one ordinary controlled-reflection query?
 
-**Understanding target.** Explain the oracle $`\mathrm{c}U=\operatorname{diag}(I,U)`$, the cost of each application, and the use of separate learning probes. Distinguish the physically irrelevant global phase of an isolated unitary channel from a relative phase anchored by a known controlled identity block. Separate unknown-oracle calls from known gates, classical computation, and simulator workspace.
+**Understanding target.** Explain the oracle $`\mathrm{c}U=\mathrm{diag}(I,U)`$, the cost of each application, and the use of separate learning probes. Distinguish the physically irrelevant global phase of an isolated unitary channel from a relative phase anchored by a known controlled identity block. Separate unknown-oracle calls from known gates, classical computation, and simulator workspace.
 
 **Dependencies and story role.** Requires M01, M03, and M05. It connects the physical unknown operation to the computational access model.
 
-**Conceptual connection.** The oracle enables a phase-consistent reflection estimate, while ordinary-query distinguishability limits every simulator, including adaptive algorithms with large auxiliary memory. Neither a long target duration nor controlled access supplies arbitrary unknown powers for free.
+**Conceptual connection.** The oracle enables a phase-consistent reflection estimate, while ordinary-query distinguishability limits every simulator, including adaptive algorithms with large auxiliary memory. Known integer powers of a reflection reduce to $`I`$ or $`U`$ by parity; interleaved target controls can still prevent reducing the complete evolution to a single parity sample.
 
 **Source pointers.** Anchor: Watrous [§3.3.3, distances between channels][w3], for the unitary-channel distance foundation. Project: [oracle access and the simulator](../science/model.md#oracle-access-and-the-simulator) and [the anchored-unitary construction](../science/query_complexity.md#31-learn-an-anchored-unitary).
 
@@ -223,7 +223,7 @@ Understand why this quantity is nonnegative on equal finite input and output dim
 ```math
 \|[H,\rho]\|_1^2\le2\sigma_H(\rho),
 \qquad
-\sigma_H(\rho)=-\operatorname{Tr}(\mathcal D_H(\rho)\ln\rho).
+\sigma_H(\rho)=-\mathrm{Tr}(\mathcal D_H(\rho)\ln\rho).
 ```
 
 Here $`[H,\rho]=H\rho-\rho H`$ and $`\mathcal D_H(\rho)=-[H,[H,\rho]]/2`$. Explain why $`\sigma_H`$ is the entropy-production rate of this Hermitian dissipator.
@@ -239,7 +239,7 @@ Here $`[H,\rho]=H\rho-\rho H`$ and $`\mathcal D_H(\rho)=-[H,[H,\rho]]/2`$. Expla
 
 **Central question.** What limits the perturbation term involving the future readout rather than the current state?
 
-**Understanding target.** Pair a forward state $`\rho_s`$ with a backward Hermitian observable $`O_s`$ of norm at most one. Understand why the noisy evolution increases $`g(s)=\operatorname{Tr}(\rho_sO_s^2)`$ by a sum of squared observable commutators. At a common CPTP control, the adjoint is unital and completely positive, so its operator Schwarz inequality makes the corresponding jump in $`g`$ nonnegative. The full integrated variance term is therefore at most one.
+**Understanding target.** Pair a forward state $`\rho_s`$ with a backward Hermitian observable $`O_s`$ of norm at most one. Understand why the noisy evolution increases $`g(s)=\mathrm{Tr}(\rho_sO_s^2)`$ by a sum of squared observable commutators. At a common CPTP control, the adjoint is unital and completely positive, so its operator Schwarz inequality makes the corresponding jump in $`g`$ nonnegative. The full integrated variance term is therefore at most one.
 
 **Dependencies and story role.** Requires M03–M04, M08, and M12. It supplies the second, complementary budget before the perturbation estimate combines the two.
 
@@ -368,7 +368,7 @@ Repeated cycles multiply coherence by $`f_b(\theta)^N`$. Relate the phase scale 
 
 **Central question.** How can a random-trajectory simulator have a bounded query count on every execution?
 
-**Understanding target.** Sample independent Poisson counts for the noisy intervals and use their total distribution $`\operatorname{Pois}(T)`$. Explain why capping the total at $`\lceil10T\rceil`$ and replacing the overflow branch by a fixed known channel produces a valid CPTP simulator with a small diamond error. Distinguish a bounded query guarantee from a mean query count.
+**Understanding target.** Sample independent Poisson counts for the noisy intervals and use their total distribution $`\mathrm{Pois}(T)`$. Explain why capping the total at $`\lceil10T\rceil`$ and replacing the overflow branch by a fixed known channel produces a valid CPTP simulator with a small diamond error. Distinguish a bounded query guarantee from a mean query count.
 
 **Dependencies and story role.** Requires M03, M05, M08–M10. It starts the algorithmic branch with a concrete linear-time upper bound.
 
@@ -381,7 +381,7 @@ Repeated cycles multiply coherence by $`f_b(\theta)^N`$. Relate the phase scale 
 
 **Central question.** How can an estimate defined only up to global phase become a usable estimate of the supplied reflection?
 
-**Understanding target.** Learn $`W=\operatorname{diag}(I_4,U)`$ as an eight-dimensional unitary using the supplied controlled oracle. Explain how the known identity block determines a computable phase alignment from the estimate alone. Hermitianize the aligned lower block and take its spectral sign, obtaining a valid reflection for every estimate. Use the imported guarantee of $`O(d^2/\zeta)`$ queries for expected squared channel error $`\mathbb E\delta^2\le\zeta^2`$, with $`d=8`$, and the fitted reflection's operator-error bound $`6\delta`$.
+**Understanding target.** Learn $`W=\mathrm{diag}(I_4,U)`$ as an eight-dimensional unitary using the supplied controlled oracle. Explain how the known identity block determines a computable phase alignment from the estimate alone. Hermitianize the aligned lower block and take its spectral sign, obtaining a valid reflection for every estimate. Use the imported guarantee of $`O(d^2/\zeta)`$ queries for expected squared channel error $`\mathbb E\delta^2\le\zeta^2`$, with $`d=8`$, and the fitted reflection's operator-error bound $`6\delta`$.
 
 **Dependencies and story role.** Requires M01, M05, M09–M10, and M17. It supplies the operational input to the improved simulation upper bound.
 

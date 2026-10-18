@@ -12,7 +12,7 @@ On $`n\geq1`$ spins, let
 B_j(\theta)=\cos\theta\,Z_j+\sin\theta\,X_j,
 \qquad
 \mathcal L_\theta=\frac1n\sum_{j=1}^n
-\left(\operatorname{Ad}_{B_j(\theta)}-\mathrm{Id}\right).
+\left(\mathrm{Ad}_{B_j(\theta)}-\mathrm{Id}\right).
 ```
 
 Each jump is a Hermitian involution. The jumps commute because they act on different spins. The system dimension is $`d=2^n`$, the total rate is one, and physical local dephasing time is $`\tau=t/n`$.
@@ -30,7 +30,7 @@ Simultaneous local rate $`\gamma`$ on each spin instead gives
 
 ```math
 \mathcal G_{\theta,\gamma}
-=\gamma\sum_j(\operatorname{Ad}_{B_j(\theta)}-\mathrm{Id}),
+=\gamma\sum_j(\mathrm{Ad}_{B_j(\theta)}-\mathrm{Id}),
 \qquad \tau=\gamma T,\qquad t=n\gamma T.
 ```
 
@@ -57,7 +57,7 @@ Set $`r=(1-e^{-2\tau})/2`$. The single-spin channel is exactly
 
 ```math
 \mathcal D_{\theta,\tau}
-=(1-r)\mathrm{Id}+r\operatorname{Ad}_{B(\theta)}.
+=(1-r)\mathrm{Id}+r\mathrm{Ad}_{B(\theta)}.
 ```
 
 Its adjoint sends $`Z`$ to $`aZ+bX`$, with
@@ -73,8 +73,8 @@ In the $`Y`$ eigenbasis, $`aZ+bX`$ exchanges the two eigenvectors with amplitude
 \begin{aligned}
 F_n(\theta,\tau)
 &=\langle O\rangle_\theta
-=\operatorname{Im}\bigl((1-r)+re^{2i\theta}\bigr)^n\\
-&=\mathbb E_{K\sim\operatorname{Bin}(n,r)}\sin(2\theta K).
+=\mathrm{Im}\bigl((1-r)+re^{2i\theta}\bigr)^n\\
+&=\mathbb E_{K\sim\mathrm{Bin}(n,r)}\sin(2\theta K).
 \end{aligned}
 ```
 
@@ -156,7 +156,7 @@ The commuting dissipators factor:
 ```math
 e^{t\mathcal L_\theta}
 =\prod_{j=1}^n
-\left[(1-r)\mathrm{Id}+r\operatorname{Ad}_{B_j(\theta)}\right],
+\left[(1-r)\mathrm{Id}+r\mathrm{Ad}_{B_j(\theta)}\right],
 \qquad r=\frac{1-e^{-2t/n}}2.
 ```
 
@@ -200,9 +200,9 @@ The fixed-rate family does not keep acquiring angular sensitivity at rate $`\sqr
 
 ```math
 e^{t\mathcal L_\theta}
-=\operatorname{Ad}_{V_\theta^{\otimes n}}\circ
+=\mathrm{Ad}_{V_\theta^{\otimes n}}\circ
 e^{t\mathcal L_0}\circ
-\operatorname{Ad}_{V_\theta^{\dagger\otimes n}}.
+\mathrm{Ad}_{V_\theta^{\dagger\otimes n}}.
 ```
 
 Thus, at every $`t`$,

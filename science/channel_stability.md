@@ -84,7 +84,7 @@ For a full-rank state $`\rho`$, define the entropy-production rate
 
 ```math
 \sigma_H(\rho)
-=-\operatorname{Tr}\mathcal D_H(\rho)\log\rho.
+=-\mathrm{Tr}\mathcal D_H(\rho)\log\rho.
 ```
 
 ### 2.1 Quantum Pinsker with natural logarithms
@@ -96,7 +96,7 @@ D(\alpha\|\beta)
 \geq\frac12\|\alpha-\beta\|_1^2.
 ```
 
-Here is the coefficient calculation. Measure the projector onto the positive part of $`\alpha-\beta`$, and let the two “positive” probabilities be $`p,q`$. Because $`\operatorname{Tr}(\alpha-\beta)=0`$,
+Here is the coefficient calculation. Measure the projector onto the positive part of $`\alpha-\beta`$, and let the two “positive” probabilities be $`p,q`$. Because $`\mathrm{Tr}(\alpha-\beta)=0`$,
 
 ```math
 p-q=\frac12\|\alpha-\beta\|_1.
@@ -139,21 +139,21 @@ Unitary conjugation preserves entropy, so
 
 ```math
 D(\rho_x\|\rho)
-=\operatorname{Tr}\rho\log\rho
--\operatorname{Tr}\rho_x\log\rho.
+=\mathrm{Tr}\rho\log\rho
+-\mathrm{Tr}\rho_x\log\rho.
 ```
 
 The linear term vanishes:
 
 ```math
-\operatorname{Tr}[H,\rho]\log\rho
-=\operatorname{Tr}H[\rho,\log\rho]=0.
+\mathrm{Tr}[H,\rho]\log\rho
+=\mathrm{Tr}H[\rho,\log\rho]=0.
 ```
 
 The quadratic coefficient is
 
 ```math
-\frac12\operatorname{Tr}[H,[H,\rho]]\log\rho
+\frac12\mathrm{Tr}[H,[H,\rho]]\log\rho
 =\sigma_H(\rho).
 ```
 
@@ -188,14 +188,14 @@ For a full-rank differentiable state, trace preservation gives
 
 ```math
 \frac{d}{ds}S(\rho_s)
-=-\operatorname{Tr}\dot\rho_s\log\rho_s.
+=-\mathrm{Tr}\dot\rho_s\log\rho_s.
 ```
 
 The common Hamiltonian contributes zero, because
 
 ```math
-\operatorname{Tr}[K,\rho_s]\log\rho_s
-=\operatorname{Tr}K[\rho_s,\log\rho_s]=0.
+\mathrm{Tr}[K,\rho_s]\log\rho_s
+=\mathrm{Tr}K[\rho_s,\log\rho_s]=0.
 ```
 
 For Hermitian jumps $`H_j(s)`$,
@@ -226,8 +226,8 @@ Let $`O,H,F`$ be Hermitian, $`\|O\|_{\mathrm{op}}\leq1`$, and let $`\rho`$ be a 
 Cyclicity of the trace gives
 
 ```math
-\operatorname{Tr}O[F,[H,\rho]]
-=\operatorname{Tr}[O,F][H,\rho].
+\mathrm{Tr}O[F,[H,\rho]]
+=\mathrm{Tr}[O,F][H,\rho].
 ```
 
 The trace/operator Hölder inequality and the elementary commutator bound give
@@ -235,7 +235,7 @@ The trace/operator Hölder inequality and the elementary commutator bound give
 ```math
 \begin{aligned}
 \frac12\left|
-\operatorname{Tr}O[F,[H,\rho]]
+\mathrm{Tr}O[F,[H,\rho]]
 \right|
 &\leq
 \frac12\|[O,F]\|_{\mathrm{op}}
@@ -251,43 +251,43 @@ Put $`C=[O,H]`$. It is anti-Hermitian, so
 $`CC^\dagger=C^\dagger C`$. Cyclicity now gives
 
 ```math
-\operatorname{Tr}O[H,[F,\rho]]
-=\operatorname{Tr}\rho[C,F].
+\mathrm{Tr}O[H,[F,\rho]]
+=\mathrm{Tr}\rho[C,F].
 ```
 
 The state-weighted inner product
 
 ```math
 \langle X,Y\rangle_\rho
-=\operatorname{Tr}\rho X^\dagger Y
+=\mathrm{Tr}\rho X^\dagger Y
 ```
 
 obeys Cauchy–Schwarz. This follows from the Hilbert–Schmidt inner product of $`X\rho^{1/2}`$ and $`Y\rho^{1/2}`$, and remains valid when it is only semidefinite. Applying it twice,
 
 ```math
 \begin{aligned}
-|\operatorname{Tr}\rho CF|
+|\mathrm{Tr}\rho CF|
 &\leq
-\sqrt{\operatorname{Tr}\rho CC^\dagger}
-\sqrt{\operatorname{Tr}\rho F^2},\\
-|\operatorname{Tr}\rho FC|
+\sqrt{\mathrm{Tr}\rho CC^\dagger}
+\sqrt{\mathrm{Tr}\rho F^2},\\
+|\mathrm{Tr}\rho FC|
 &\leq
-\sqrt{\operatorname{Tr}\rho C^\dagger C}
-\sqrt{\operatorname{Tr}\rho F^2}.
+\sqrt{\mathrm{Tr}\rho C^\dagger C}
+\sqrt{\mathrm{Tr}\rho F^2}.
 \end{aligned}
 ```
 
-The two commutator orders agree because $`C`$ is anti-Hermitian. Taking half their sum and using $`\operatorname{Tr}\rho F^2\leq\|F\|_{\mathrm{op}}^2`$ proves
+The two commutator orders agree because $`C`$ is anti-Hermitian. Taking half their sum and using $`\mathrm{Tr}\rho F^2\leq\|F\|_{\mathrm{op}}^2`$ proves
 
 ```math
 \boxed{
 \frac12\left|
-\operatorname{Tr}O[H,[F,\rho]]
+\mathrm{Tr}O[H,[F,\rho]]
 \right|
 \leq
 \|F\|_{\mathrm{op}}
 \sqrt{
-\operatorname{Tr}\rho[H,O]^\dagger[H,O]
+\mathrm{Tr}\rho[H,O]^\dagger[H,O]
 }.
 }
 ```
@@ -332,11 +332,11 @@ All operators on the retained system below implicitly tensor with the identity o
 Differentiating the finite product of propagators and controls, using Duhamel's formula inside each noisy interval, gives
 
 ```math
-\frac{d}{du}\operatorname{Tr}O\,
-(\Phi_u\otimes\operatorname{Id}_R)(\rho_{\mathrm{in}})
+\frac{d}{du}\mathrm{Tr}O\,
+(\Phi_u\otimes\mathrm{Id}_R)(\rho_{\mathrm{in}})
 =
 \sum_{\mathrm{intervals}}\int
-\operatorname{Tr}O_s\,\dot{\mathcal L}_u(s)(\rho_s)\,ds,
+\mathrm{Tr}O_s\,\dot{\mathcal L}_u(s)(\rho_s)\,ds,
 ```
 
 with
@@ -403,14 +403,14 @@ On an open noisy interval, the forward state and backward observable obey
 Define
 
 ```math
-g(s)=\operatorname{Tr}\rho_sO_s^2.
+g(s)=\mathrm{Tr}\rho_sO_s^2.
 ```
 
 Differentiating both factors gives
 
 ```math
 g'(s)
-=\operatorname{Tr}\rho_s
+=\mathrm{Tr}\rho_s
 \left[
 \mathcal L_u^\dagger(O_s^2)
 -\mathcal L_u^\dagger(O_s)O_s
@@ -434,7 +434,7 @@ Thus, during a noisy interval,
 ```math
 g'(s)
 =
-\operatorname{Tr}\rho_s
+\mathrm{Tr}\rho_s
 \sum_jp_j(s)
 [H_j(u,s),O_s]^\dagger[H_j(u,s),O_s]
 \geq0.
@@ -445,17 +445,17 @@ g'(s)
 At a control $`\mathcal C`$,
 
 ```math
-\rho_+=(\mathcal C\otimes\operatorname{Id}_R)(\rho_-),
+\rho_+=(\mathcal C\otimes\mathrm{Id}_R)(\rho_-),
 \qquad
-O_-=(\mathcal C^\dagger\otimes\operatorname{Id}_R)(O_+).
+O_-=(\mathcal C^\dagger\otimes\mathrm{Id}_R)(O_+).
 ```
 
-Writing $`\Psi=\mathcal C^\dagger\otimes\operatorname{Id}_R`$,
+Writing $`\Psi=\mathcal C^\dagger\otimes\mathrm{Id}_R`$,
 
 ```math
 g_+-g_-
 =
-\operatorname{Tr}\rho_-
+\mathrm{Tr}\rho_-
 \left[\Psi(O_+^2)-\Psi(O_+)^2\right]\geq0.
 ```
 
@@ -476,7 +476,7 @@ The variance changes therefore telescope with nonnegative contributions both in 
 0\leq g_{\mathrm{in}},
 \qquad
 g_{\mathrm{out}}
-=\operatorname{Tr}\rho_{\mathrm{out}}O^2\leq1,
+=\mathrm{Tr}\rho_{\mathrm{out}}O^2\leq1,
 ```
 
 the integrated noisy contribution satisfies
@@ -484,7 +484,7 @@ the integrated noisy contribution satisfies
 ```math
 \boxed{
 \int_0^T\sum_jp_j(s)
-\operatorname{Tr}\rho_s
+\mathrm{Tr}\rho_s
 [H_j(u,s),O_s]^\dagger[H_j(u,s),O_s]\,ds
 \leq1.
 }
@@ -498,8 +498,8 @@ Combining Sections 4 and 5 gives, for each interpolation value, joint input, and
 
 ```math
 \left|
-\frac{d}{du}\operatorname{Tr}O\,
-(\Phi_u\otimes\operatorname{Id}_R)(\rho_{\mathrm{in}})
+\frac{d}{du}\mathrm{Tr}O\,
+(\Phi_u\otimes\mathrm{Id}_R)(\rho_{\mathrm{in}})
 \right|
 \leq
 V\left[1+\sqrt{4\log D+2E}\right].
@@ -509,7 +509,7 @@ Integrate over $`u\in[0,1]`$ and optimize the final Hermitian witness. Since the
 
 ```math
 \left\|
-((\Phi_A-\Phi_B)\otimes\operatorname{Id}_R)(\rho_{\mathrm{in}})
+((\Phi_A-\Phi_B)\otimes\mathrm{Id}_R)(\rho_{\mathrm{in}})
 \right\|_1
 \leq
 V\left[1+\sqrt{4\log D+2E}\right].
@@ -532,8 +532,8 @@ X^\dagger&0
 Then $`\|Y\|_1=1`$, and Hermiticity preservation implies
 
 ```math
-\|(\Lambda\otimes\operatorname{Id})(Y)\|_1
-=\|(\Lambda\otimes\operatorname{Id})(X)\|_1.
+\|(\Lambda\otimes\mathrm{Id})(Y)\|_1
+=\|(\Lambda\otimes\mathrm{Id})(X)\|_1.
 ```
 
 Decompose $`Y=Y_+-Y_-`$. The positive traces sum to one. A bound on normalized positive inputs therefore bounds the image of $`Y`$ by the triangle inequality with the same constant. Thus a state bound controls the definition of the diamond norm over all trace-norm-one operators.
@@ -564,7 +564,7 @@ and replace every control by
 The reference marginal $`\rho_R^{(\epsilon)}`$ is full rank and remains fixed. At any regularized control,
 
 ```math
-(\mathcal C_k^{(\epsilon)}\otimes\operatorname{Id}_R)(\rho)
+(\mathcal C_k^{(\epsilon)}\otimes\mathrm{Id}_R)(\rho)
 \geq
 \epsilon\,\frac{I_A}{D}\otimes\rho_R^{(\epsilon)}
 >0.
@@ -597,7 +597,7 @@ The same proof then gives
 
 ```math
 \left\|
-((\Phi_A-\Phi_B)\otimes\operatorname{Id}_R)(\rho)
+((\Phi_A-\Phi_B)\otimes\mathrm{Id}_R)(\rho)
 \right\|_1
 \leq
 V\left[
@@ -612,20 +612,20 @@ Without a reference, replace conditional entropy by the input entropy. The diamo
 If every endpoint jump is a Hermitian unitary involution, then
 
 ```math
-\mathcal D_A=\operatorname{Ad}_A-\operatorname{Id}.
+\mathcal D_A=\mathrm{Ad}_A-\mathrm{Id}.
 ```
 
 For any unitaries $`A,B`$,
 
 ```math
-\operatorname{Ad}_A(X)-\operatorname{Ad}_B(X)
+\mathrm{Ad}_A(X)-\mathrm{Ad}_B(X)
 =(A-B)XA^\dagger+BX(A^\dagger-B^\dagger).
 ```
 
 The multiplication bounds hold with any reference, giving
 
 ```math
-\|\operatorname{Ad}_A-\operatorname{Ad}_B\|_\diamond
+\|\mathrm{Ad}_A-\mathrm{Ad}_B\|_\diamond
 \leq2\|A-B\|_{\mathrm{op}}.
 ```
 

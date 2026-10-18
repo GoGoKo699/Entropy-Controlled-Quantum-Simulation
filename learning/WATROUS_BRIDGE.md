@@ -32,10 +32,10 @@ Watrous provides these mathematical foundations. The controlled Lindblad stabili
 | Topic | Watrous notation or background convention | Convention here |
 |---|---|---|
 | Vectors and adjoints | Vectors such as $`u`$, rank-one operators $`uu^*`$, and adjoints $`X^*`$, $`\Phi^*`$ | Dirac notation $`\lvert u\rangle`$, $`\lvert u\rangle\langle u\rvert`$, and daggers $`X^\dagger`$, $`\Phi^\dagger`$ |
-| Identity | The identity operator and identity map are distinguished by their spaces | $`I`$ is an operator; $`\operatorname{Id}`$ or $`\mathrm{id}`$ is a map |
+| Identity | The identity operator and identity map are distinguished by their spaces | $`I`$ is an operator; $`\mathrm{Id}`$ or $`\mathrm{id}`$ is a map |
 | Entropy | $`H(\rho)`$, with base-two logarithms | $`S(\rho)=(\ln2)H(\rho)`$, in nats; a maximally mixed qubit has entropy $`\ln2`$ |
 | Relative entropy | Base-two $`D(\rho\Vert\sigma)`$ | Natural-logarithm relative entropy equals the base-two value multiplied by $`\ln2`$ |
-| Trace norm | $`\|X\|_1=\operatorname{Tr}\sqrt{X^\dagger X}`$ | The same full norm; no factor $`1/2`$ is absorbed into it |
+| Trace norm | $`\|X\|_1=\mathrm{Tr}\sqrt{X^\dagger X}`$ | The same full norm; no factor $`1/2`$ is absorbed into it |
 | Complete channel norm | The book's triple-bar completely bounded trace norm, $`\lVert\!\lVert\!\lVert\Phi\rVert\!\rVert\!\rVert_1`$ | $`\|\Phi\|_\diamond`$, also unhalved; the induced trace norm without a reference is a different quantity |
 | Retained system and reference | Tensor-product registers and reduction maps | $`A`$ is the retained target, $`D=\dim A`$; $`R`$ is present as a reference and untouched by the entire target protocol |
 | Control resource | Channel and entropy notions provide the ingredients | $`E`$ bounds the sum of target-control capacities $`\kappa(C)`$; it does not constrain the simulator's own probes or resets |
@@ -75,7 +75,7 @@ Let $`A`$ be a qubit and let
 ```
 Replacing the qubit by this known state is the channel
 ```math
-\mathcal R_b(X)=\tau_b\,\operatorname{Tr}X.
+\mathcal R_b(X)=\tau_b\,\mathrm{Tr}X.
 ```
 The channel representations of Chapter 2 make this concrete. Its four Kraus operators can be chosen as
 ```math
@@ -87,7 +87,7 @@ Direct substitution gives
 \sum_{a,c}K_{ac}^\dagger K_{ac}=I,
 \qquad
 \sum_{a,c}K_{ac}XK_{ac}^\dagger
-=\tau_b\,\operatorname{Tr}X.
+=\tau_b\,\mathrm{Tr}X.
 ```
 The first identity proves trace preservation; the Kraus form supplies complete positivity. On a state correlated with a reference,
 ```math
@@ -123,7 +123,7 @@ The joint entropy decrease is now negative. The same channel has a positive maxi
 
 The backward action is equally explicit:
 ```math
-\mathcal R_b^\dagger(O)=\operatorname{Tr}(\tau_b O)\,I.
+\mathcal R_b^\dagger(O)=\mathrm{Tr}(\tau_b O)\,I.
 ```
 For the observable $`Z`$,
 ```math
@@ -149,14 +149,14 @@ It satisfies $`\mathcal D_H(I)=0`$, so its evolution is unital. A weighted sum o
 
 For a reflection $`U=U^\dagger`$, $`U^2=I`$, the evolution has an elementary channel representation:
 ```math
-e^{t(\operatorname{Ad}_U-\operatorname{Id})}
+e^{t(\mathrm{Ad}_U-\mathrm{Id})}
 =e^{-t}\sum_{k=0}^{\infty}
-\frac{t^k}{k!}\operatorname{Ad}_{U^k}.
+\frac{t^k}{k!}\mathrm{Ad}_{U^k}.
 ```
 This is a Poisson mixture of unitary channels. Even jump counts give the identity and odd counts give $`U`$, so
 ```math
-e^{t(\operatorname{Ad}_U-\operatorname{Id})}
-=(1-p_t)\operatorname{Id}+p_t\operatorname{Ad}_U,
+e^{t(\mathrm{Ad}_U-\mathrm{Id})}
+=(1-p_t)\mathrm{Id}+p_t\mathrm{Ad}_U,
 \qquad
 p_t=\frac{1-e^{-2t}}2.
 ```
@@ -190,7 +190,7 @@ Three connections turn the book's finite-dimensional tools into the complete-cha
 For a full-rank state, define
 ```math
 \sigma_H(\rho)
-=-\operatorname{Tr}\mathcal D_H(\rho)\ln\rho.
+=-\mathrm{Tr}\mathcal D_H(\rho)\ln\rho.
 ```
 Along the unitary curve $`\rho_x=e^{ixH}\rho e^{-ixH}`$, direct expansion gives
 ```math
@@ -226,11 +226,11 @@ Let $`\rho_s`$ be the forward state and let $`O_s`$ be a terminal Hermitian obse
 
 For a matched forward and backward evolution,
 ```math
-g(s)=\operatorname{Tr}\rho_s O_s^2
+g(s)=\mathrm{Tr}\rho_s O_s^2
 ```
 has noisy-interval derivative
 ```math
-g'(s)=\sum_jp_j(s)\operatorname{Tr}\rho_s
+g'(s)=\sum_jp_j(s)\mathrm{Tr}\rho_s
 [H_j(s),O_s]^\dagger[H_j(s),O_s]\geq0.
 ```
 At a control $`C`$, its jump is also nonnegative because the adjoint is unital and completely positive:
@@ -269,7 +269,7 @@ The access model supplies ordinary controlled-$`U`$ queries. The simulation uppe
 
 The learner is applied to
 ```math
-W=\operatorname{diag}(I_4,U),
+W=\mathrm{diag}(I_4,U),
 ```
 which is one supplied controlled-$`U`$ call. Channel learning initially determines a unitary only up to global phase. The known identity block supplies a phase reference, after which Hermitian symmetrization and a spectral sign operation give a reflection estimate $`U'`$. The estimate is learned on auxiliary probes while the unknown target input is kept untouched.
 
@@ -289,7 +289,7 @@ The query theorem concerns the worst target in the specified class, with a query
 
 The lower bound connects state discrimination back to oracle use. The exact mixed-reset protocol gives two target outputs whose full trace-norm gap exceeds $`0.08`$, for a chosen pair $`U_0,U_\theta`$ with operator distance at most $`|\theta|`$. An algorithm using $`q`$ controlled-oracle calls has output gap at most $`2q|\theta|`$, by replacing its calls one at a time and using channel contraction. Diamond error $`0.01`$ under each hypothesis can remove at most $`0.02`$ from the target gap. A nonzero gap therefore forces $`q`$ of order $`1/|\theta|`$.
 
-Chapter 3, §3.3.3, pp. 178–179, provides the channel-network error-addition framework behind such replacements. Choosing the oracle family, obtaining a uniform finite output gap, and arranging every real $`T`$ and every capacity budget are extra arguments in the [query lower proof](../science/query_complexity.md#lower-bound). Matrix entries, arbitrary unknown powers, quantum random-access memory, and postselection are not supplied by the model.
+Chapter 3, §3.3.3, pp. 178–179, provides the channel-network error-addition framework behind such replacements. Choosing the oracle family, obtaining a uniform finite output gap, and arranging every real $`T`$ and every capacity budget are extra arguments in the [query lower proof](../science/query_complexity.md#lower-bound). Known integer powers of the reflection reduce to the identity or one ordinary query. Matrix entries and entrywise-conjugate oracles are not supplied, and the approximation guarantee cannot be conditioned on postselection.
 
 <a id="memory-and-rates"></a>
 

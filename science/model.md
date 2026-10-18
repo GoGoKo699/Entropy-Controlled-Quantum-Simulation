@@ -9,7 +9,7 @@ The control resource is the amount of entropy a prescribed operation can remove 
 A quantum channel is a completely positive trace-preserving (CPTP) linear map. On a retained system of dimension $`D`$, a state is a positive matrix $`\rho`$ of trace one. Its von Neumann entropy is
 
 ```math
-S(\rho)=-\operatorname{Tr}(\rho\log\rho),
+S(\rho)=-\mathrm{Tr}(\rho\log\rho),
 ```
 
 with natural logarithms and the convention $`0\log0=0`$. Thus the entropy of a maximally mixed qubit is $`\log2`$.
@@ -83,7 +83,7 @@ The supplied oracle is ordinary controlled-$`U`$,
 +|1\rangle\langle1|\otimes U.
 ```
 
-Each application counts as one query. Fixing its control to one supplies an uncontrolled application. Inverse access gives the same reflection; it does not supply arbitrary powers at unit cost. The oracle is available on auxiliary learning probes as well as on the target input.
+Each application counts as one query. Fixing its control to one supplies an uncontrolled application. Because $`U^\dagger=U`$ and $`U^2=I`$, inverse access uses the same oracle, and known integer powers reduce to the identity or one ordinary query. The oracle is available on auxiliary learning probes as well as on the target input.
 
 The simulator may use arbitrary known operations, auxiliary quantum memory, measurements, resets, and classical processing. All its unknown-oracle calls count. It must implement an unconditioned CPTP channel $`\widehat\Phi_U`$ satisfying
 
