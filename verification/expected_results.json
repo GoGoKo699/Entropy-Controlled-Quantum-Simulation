@@ -1,0 +1,210 @@
+{
+  "description": "Finite consistency checks; analytical proofs are in science/.",
+  "controlled_variance": [
+    {
+      "reset_polarization": 0.65,
+      "reference_dimension": 2,
+      "duhamel_error": 1.3877787807814457e-17,
+      "variance_identity_error": 2.220446049250313e-16,
+      "variance_control_jump": 0.10186795825282871,
+      "entropy_identity_error": 2.7755575615628914e-16,
+      "actual_entropy_decrease": 0.08561360243890204,
+      "control_capacity": 0.22942074074053487
+    },
+    {
+      "reset_polarization": 0.98,
+      "reference_dimension": 2,
+      "duhamel_error": 1.3877787807814457e-17,
+      "variance_identity_error": 5.551115123125783e-17,
+      "variance_control_jump": 0.23539572347126175,
+      "entropy_identity_error": 8.881784197001252e-16,
+      "actual_entropy_decrease": 0.547139710525644,
+      "control_capacity": 0.637145646205098
+    }
+  ],
+  "mixed_reset": [
+    {
+      "cycles": 1,
+      "polarization": 1.0,
+      "angle": 0.5,
+      "trace_distance": 0.41454234754633756,
+      "budget": 0.6931471805599453,
+      "actual_entropy_removed_at_zero": 0.6839611990567596
+    },
+    {
+      "cycles": 4,
+      "polarization": 0.5,
+      "angle": 0.25,
+      "trace_distance": 0.43028689670597803,
+      "budget": 0.523248143764548,
+      "actual_entropy_removed_at_zero": 0.5140833226835015
+    },
+    {
+      "cycles": 4,
+      "polarization": 1.0,
+      "angle": 0.125,
+      "trace_distance": 0.4231777677803097,
+      "budget": 2.772588722239781,
+      "actual_entropy_removed_at_zero": 2.7358447962270382
+    },
+    {
+      "cycles": 16,
+      "polarization": 0.25,
+      "angle": 0.125,
+      "trace_distance": 0.43125124668929843,
+      "budget": 0.5053430784314106,
+      "actual_entropy_removed_at_zero": 0.49618351098533964
+    },
+    {
+      "cycles": 16,
+      "polarization": 0.5,
+      "angle": 0.0625,
+      "trace_distance": 0.421609755929972,
+      "budget": 2.092992575058192,
+      "actual_entropy_removed_at_zero": 2.056333290734006
+    },
+    {
+      "cycles": 16,
+      "polarization": 1.0,
+      "angle": 0.03125,
+      "trace_distance": 0.4273784052956187,
+      "budget": 11.090354888959125,
+      "actual_entropy_removed_at_zero": 10.943379184908153
+    },
+    {
+      "cycles": 64,
+      "polarization": 0.125,
+      "angle": 0.0625,
+      "trace_distance": 0.43131350483626296,
+      "budget": 0.5013102901431736,
+      "actual_entropy_removed_at_zero": 0.49215203384849815
+    },
+    {
+      "cycles": 64,
+      "polarization": 0.5,
+      "angle": 0.015625,
+      "trace_distance": 0.4265784606737405,
+      "budget": 8.371970300232768,
+      "actual_entropy_removed_at_zero": 8.225333162936025
+    },
+    {
+      "cycles": 64,
+      "polarization": 1.0,
+      "angle": 0.0078125,
+      "trace_distance": 0.42856513383906053,
+      "budget": 44.3614195558365,
+      "actual_entropy_removed_at_zero": 43.77351673963261
+    },
+    {
+      "cycles": 1000,
+      "polarization": 0.03162277660168379,
+      "angle": 0.015811388300841896,
+      "trace_distance": 0.4313187820072948,
+      "budget": 0.5000833666845006,
+      "actual_entropy_removed_at_zero": 0.49092551928475725
+    },
+    {
+      "cycles": 1000,
+      "polarization": 0.5,
+      "angle": 0.001,
+      "trace_distance": 0.4288085931226533,
+      "budget": 130.812035941137,
+      "actual_entropy_removed_at_zero": 128.5208306708754
+    },
+    {
+      "cycles": 1000,
+      "polarization": 1.0,
+      "angle": 0.0005,
+      "trace_distance": 0.4289469182006162,
+      "budget": 693.1471805599452,
+      "actual_entropy_removed_at_zero": 683.9611990567596
+    }
+  ],
+  "local_spin": [
+    {
+      "qubits": 1,
+      "local_time": 0.3,
+      "readout_error": 5.551115123125783e-17,
+      "entropy_error": 1.1102230246251565e-16,
+      "readout": 0.18983095845491155
+    },
+    {
+      "qubits": 1,
+      "local_time": 1.0,
+      "readout_error": 2.220446049250313e-16,
+      "entropy_error": 1.1102230246251565e-16,
+      "readout": 0.363795135371764
+    },
+    {
+      "qubits": 2,
+      "local_time": 0.3,
+      "readout_error": 2.220446049250313e-16,
+      "entropy_error": 0.0,
+      "readout": 0.21033743044885056
+    },
+    {
+      "qubits": 2,
+      "local_time": 1.0,
+      "readout_error": 3.3306690738754696e-16,
+      "entropy_error": 0.0,
+      "readout": 0.3926026856256078
+    },
+    {
+      "qubits": 3,
+      "local_time": 0.3,
+      "readout_error": 1.3877787807814457e-16,
+      "entropy_error": 2.220446049250313e-16,
+      "readout": 0.21557223429944855
+    },
+    {
+      "qubits": 3,
+      "local_time": 1.0,
+      "readout_error": 2.220446049250313e-16,
+      "entropy_error": 0.0,
+      "readout": 0.40158292285354014
+    },
+    {
+      "qubits": 4,
+      "local_time": 0.3,
+      "readout_error": 1.1102230246251565e-16,
+      "entropy_error": 0.0,
+      "readout": 0.21789676251239776
+    },
+    {
+      "qubits": 4,
+      "local_time": 1.0,
+      "readout_error": 4.440892098500626e-16,
+      "entropy_error": 4.440892098500626e-16,
+      "readout": 0.40599393026227215
+    },
+    {
+      "qubits": 5,
+      "local_time": 0.3,
+      "readout_error": 8.326672684688674e-17,
+      "entropy_error": 3.552713678800501e-15,
+      "readout": 0.21919744912066505
+    },
+    {
+      "qubits": 5,
+      "local_time": 1.0,
+      "readout_error": 2.220446049250313e-16,
+      "entropy_error": 4.440892098500626e-16,
+      "readout": 0.4086191747955601
+    },
+    {
+      "qubits": 6,
+      "local_time": 0.3,
+      "readout_error": 8.326672684688674e-17,
+      "entropy_error": 4.440892098500626e-16,
+      "readout": 0.2200251971710511
+    },
+    {
+      "qubits": 6,
+      "local_time": 1.0,
+      "readout_error": 3.885780586188048e-16,
+      "entropy_error": 0.0,
+      "readout": 0.4103612912187546
+    }
+  ],
+  "mixed_reset_circuit_max_error": 1.2366045929722245e-15
+}
