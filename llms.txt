@@ -1,0 +1,35 @@
+# Entropy-Controlled Quantum Simulation
+
+> Scientific account of how entropy-decrease capacity of known target controls governs the oracle-query cost of simulating Hermitian reflection noise.
+
+## Entry points
+
+- [Repository overview](README.md): principal results, proof navigation, verification, and scope.
+- [Scientific index](science/README.md): connected proof route and navigation by question.
+- [Model and results](science/model.md): precise target descriptor, total exposure, controlled-reflection oracle, unconditioned diamond error, and resource promises.
+
+## Authoritative science
+
+- [Entropy-decrease capacity](science/entropy_capacity.md): definition, reference invariance, additivity, composition, and exact reset capacities.
+- [Channel stability](science/channel_stability.md): complete Hermitian-jump perturbation proof using entropy production and backward variance, including controls and singular states.
+- [Mixed resets](science/mixed_resets.md): exact two-qubit fixed-rate witness for every real exposure time and capacity regime.
+- [Query complexity](science/query_complexity.md): bounded-query unitary-learning upper, global-phase fit, Poisson cap, and ordinary-oracle hybrid lower.
+- [Memory and local noise](science/memory_and_local_noise.md): dimension sharpness, local GHZ example, local query law, and weighted retained-qubit/pure-reset construction.
+- [Interpretation](science/interpretation.md): physical meaning and boundaries of the results.
+
+## Evidence and attribution
+
+- [Related work](references/RELATED_WORK.md): primary-source comparison and the scope of imported results.
+- [Bibliography](references/references.bib): machine-readable bibliographic metadata.
+- [Finite verification](verification/README.md): commands, grids, tolerances, reference environment, and limitations.
+- [Verification script](verification/checks.py): reproducible finite matrix and witness checks.
+- [Reference numerical outputs](verification/expected_results.json): a recorded successful run.
+
+## Conventions that affect interpretation
+
+Entropy is measured in nats. Trace and diamond norms are unhalved. Every initial, intermediate, and terminal target control is charged. The retained dimension includes persistent quantum and classical memory; an untouched reference is allowed. The target budget is separate from simulator memory and reset use.
+
+The main query theorem fixes target dimension four and diamond error 0.01. It counts bounded calls to the unknown controlled reflection, not total runtime. The general channel bound uses a supplied matched Hermitian-jump representation. The supporting long-time weighted-memory construction reduces actual dissipative activity; it does not provide the corresponding stronger lower bound for raw reflection queries.
+
+The analytical proofs are authoritative for universal claims. The finite numerical suite checks its documented examples and identities. The account makes no quantum-Fisher-information or work-cost claim.
+
