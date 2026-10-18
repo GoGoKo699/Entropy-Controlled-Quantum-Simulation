@@ -8,6 +8,17 @@
 - [Scientific index](science/README.md): connected proof route and navigation by question.
 - [Model and results](science/model.md): precise target descriptor, total exposure, controlled-reflection oracle, unconditioned diamond error, and resource promises.
 
+## Reading routes
+
+- Story: begin with the model, then interpretation and the exact mixed-reset example; use the query proof to connect the physical mechanism to simulation cost.
+- Study: use the [learning overview](learning/README.md), [Watrous bridge](learning/WATROUS_BRIDGE.md), and [30-milestone map](learning/MILESTONES.md). The map has 10 background/preliminary targets and 20 narrative/innovation targets, each with dependencies, conceptual connections, and canonical sources.
+- Theorems: go directly to channel stability for the general Hermitian-jump bound and query complexity for the fixed-dimension classification.
+- Reproduction: follow verification/README.md, requirements.txt, and verification/checks.py; the expected JSON records the documented finite cases.
+
+## Educational anchor
+
+John Watrous, [The Theory of Quantum Information (2018)](https://cs.uwaterloo.ca/~watrous/TQI/), is the single educational anchor. The bridge selects relevant sections, translates notation and normalization, and explains the additional dynamics, control-budget, and oracle-query steps supplied by the project. Primary research dependencies remain identified in the scientific account and bibliography.
+
 ## Authoritative science
 
 - [Entropy-decrease capacity](science/entropy_capacity.md): definition, reference invariance, additivity, composition, and exact reset capacities.

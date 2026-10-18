@@ -67,11 +67,23 @@ A [two-qubit mixed-reset construction](science/mixed_resets.md) attains the time
 | Complete entropy-and-variance proof | [Channel stability](science/channel_stability.md) |
 | Exact witness in every time and capacity regime | [Two-qubit mixed resets](science/mixed_resets.md) |
 | Learning upper, Poisson cap, and oracle hybrid lower | [Query complexity](science/query_complexity.md) |
-| Dimension, local GHZ states, and weighted reset sharpness | [Memory and local noise](science/memory_and_local_noise.md) |
+| Dimension, the local query law, and weighted reset sharpness | [Memory and local noise](science/memory_and_local_noise.md) |
 | Physical meaning and resource boundaries | [Interpretation](science/interpretation.md) |
 | Imported results and closest prior models | [Related work](references/RELATED_WORK.md) and [BibTeX](references/references.bib) |
 
 The [science index](science/README.md) also provides a connected proof route and navigation by question.
+
+## Learning route
+
+The single educational anchor is John Watrous, [*The Theory of Quantum Information* (2018)](https://cs.uwaterloo.ca/~watrous/TQI/). Its channel, distance, unitality, and entropy foundations lead into the project's Hermitian-noise and oracle arguments through a focused source bridge.
+
+| Read for | Route |
+|---|---|
+| The connected study path and proof relationships | [Learning overview](learning/README.md) |
+| Relevant Watrous sections, conventions, and the steps into this project | [Watrous bridge](learning/WATROUS_BRIDGE.md) |
+| A complete map of the project's understanding targets | [30 milestones](learning/MILESTONES.md) |
+
+The map has **10 background/preliminary milestones and 20 narrative/innovation milestones**, progressing from local ingredients to the complete scientific story within each phase. Each target links to its prerequisites, conceptual connections, and authoritative sources.
 
 ## Reproduce the finite checks
 
