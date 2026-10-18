@@ -4,6 +4,8 @@ The project classifies the oracle-query cost of a known controlled evolution gen
 
 Read [the model and principal results](model.md) first. It defines the full-channel output, the ordinary controlled-reflection oracle, the entropy budget, the time normalization, and the distinction between target controls and simulator resources.
 
+For the foundations and their connections to this account, use the [Watrous bridge](../learning/WATROUS_BRIDGE.md) and the [project milestone map](../learning/MILESTONES.md).
+
 ## Main proof route
 
 1. [Entropy-decrease capacity](entropy_capacity.md) establishes the reference and reset accounting for the control resource.
@@ -12,7 +14,7 @@ Read [the model and principal results](model.md) first. It defines the full-chan
 4. [Query complexity](query_complexity.md) combines unitary learning and the stability theorem for the upper bound, and the exact construction with an oracle hybrid for the lower bound.
 5. [Interpretation](interpretation.md) connects entropy removal, finite memory, discrimination, and simulation, with the operational boundaries kept explicit.
 
-The [memory and local-noise account](memory_and_local_noise.md) gives supporting sharpness results for retained dimension and pure-reset count. These have their own stated rate and oracle normalizations.
+The [memory and local-noise account](memory_and_local_noise.md) gives supporting sharpness results for retained dimension and pure-reset count, together with the [local query law](memory_and_local_noise.md#4-exact-local-class-query-complexity) $`\Theta(\min\{t,n\})`$. These results have their own stated rate and oracle normalizations.
 
 ## Reading by question
 
