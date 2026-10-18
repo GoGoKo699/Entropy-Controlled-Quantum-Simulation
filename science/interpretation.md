@@ -67,9 +67,9 @@ The lower bound is therefore against arbitrary oracle algorithms, and the upper 
 With no interventions, every jump word reduces to its parity because $`U^2=I`$. Exactly,
 
 ```math
-e^{T(\operatorname{Ad}_U-\mathrm{id})}
+e^{T(\mathrm{Ad}_U-\mathrm{id})}
 =\frac{1+e^{-2T}}2\,\mathrm{id}
-+\frac{1-e^{-2T}}2\,\operatorname{Ad}_U.
++\frac{1-e^{-2T}}2\,\mathrm{Ad}_U.
 ```
 
 Sampling one classical Bernoulli variable and applying $`U`$ on the odd branch implements this channel with at most one query, for every $`T`$. Interleaved known controls can prevent that global parity cancellation. The zero-capacity class still permits many unital controls, including the maximally mixed syndrome replacement used in the lower bound. Thus the square-root lower at $`E=0`$ describes a controlled class that already contains more targets than the uninterrupted single-reflection semigroup.

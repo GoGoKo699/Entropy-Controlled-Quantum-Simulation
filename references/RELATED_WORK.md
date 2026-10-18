@@ -99,7 +99,7 @@ Jeongwan Haah, Robin Kothari, Ryan O'Donnell, Ewin Tang, **“Query-optimal esti
 
 Theorem 1.1 outputs a classical unitary description with expected squared diamond error at most $`\varepsilon^2`$, using $`O(d^2/\varepsilon)`$ applications and one $`d`$-dimensional qudit. Its lower bound remains valid with inverse and controlled queries.
 
-This project uses that existing learner. Ordinary controlled access allows learning $`\operatorname{diag}(I,U)`$ and fixing the otherwise unobservable global phase using the known identity block. A Hermitian reflection representative can then be recovered for the stability estimate. The additional step is translating learning accuracy into error for an entire controlled dissipative target. The resulting fixed-dimension query theorem does not remove the dimension-dependent cost of tomography or establish efficient simulation as the number of target qubits grows.
+This project uses that existing learner. Ordinary controlled access allows learning $`\mathrm{diag}(I,U)`$ and fixing the otherwise unobservable global phase using the known identity block. A Hermitian reflection representative can then be recovered for the stability estimate. The additional step is translating learning accuracy into error for an entire controlled dissipative target. The resulting fixed-dimension query theorem does not remove the dimension-dependent cost of tomography or establish efficient simulation as the number of target qubits grows.
 
 <a id="wang2026"></a>
 ### Wang–Ye (2026): general query-optimal Lindblad simulation

@@ -5,7 +5,7 @@ The capacity used in the [controlled-noise model](model.md) measures how much a 
 All spaces are finite dimensional. All logarithms are natural, so entropy is measured in nats. A channel is completely positive and trace preserving (CPTP). Write
 
 ```math
-S(\rho)=-\operatorname{Tr}\rho\log\rho,
+S(\rho)=-\mathrm{Tr}\rho\log\rho,
 \qquad
 I(A:R)_\rho=S(\rho_A)+S(\rho_R)-S(\rho_{AR}).
 ```
@@ -72,7 +72,7 @@ In particular, unitary controls, mixtures of unitary controls, and nonselective 
 
 ## 2. An untouched reference does not increase capacity
 
-Let $`R`$ be an arbitrary finite-dimensional reference. A local channel on $`A`$ leaves the $`R`$ marginal unchanged. For a joint input $`\rho_{AR}`$, write $`\rho'_{AR}=(\mathcal C\otimes\operatorname{Id}_R)(\rho_{AR})`$. Then
+Let $`R`$ be an arbitrary finite-dimensional reference. A local channel on $`A`$ leaves the $`R`$ marginal unchanged. For a joint input $`\rho_{AR}`$, write $`\rho'_{AR}=(\mathcal C\otimes\mathrm{Id}_R)(\rho_{AR})`$. Then
 
 ```math
 \begin{aligned}
@@ -87,7 +87,7 @@ Mutual information cannot increase under a channel on $`A`$. Consequently,
 ```math
 \boxed{
 S(\rho_{AR})-S\!\left(
-(\mathcal C\otimes\operatorname{Id}_R)(\rho_{AR})
+(\mathcal C\otimes\mathrm{Id}_R)(\rho_{AR})
 \right)
 \leq\kappa(\mathcal C).
 }
@@ -96,7 +96,7 @@ S(\rho_{AR})-S\!\left(
 Product states $`\rho_A\otimes\rho_R`$, with $`\rho_A`$ maximizing the definition, achieve equality in the optimization over joint inputs. Thus
 
 ```math
-\kappa(\mathcal C\otimes\operatorname{Id}_R)
+\kappa(\mathcal C\otimes\mathrm{Id}_R)
 =\kappa(\mathcal C).
 ```
 
@@ -165,7 +165,7 @@ It follows that
 }
 ```
 
-In particular, let $`\mathcal D_D(\rho)=I_D\operatorname{Tr}(\rho)/D`$ denote complete depolarization. Since $`\mathcal D_D`$ is unital,
+In particular, let $`\mathcal D_D(\rho)=I_D\mathrm{Tr}(\rho)/D`$ denote complete depolarization. Since $`\mathcal D_D`$ is unital,
 
 ```math
 \kappa\!\left((1-\epsilon)\mathcal C+\epsilon\mathcal D_D\right)
@@ -232,7 +232,7 @@ e(b)
 \end{aligned}
 ```
 
-For $`|b|<1`$, differentiating gives $`e'(b)=\operatorname{artanh}b`$. Integrating its power series and using $`e(0)=0`$ yields
+For $`|b|<1`$, differentiating gives $`e'(b)=\mathrm{artanh}b`$. Integrating its power series and using $`e(0)=0`$ yields
 
 ```math
 e(b)

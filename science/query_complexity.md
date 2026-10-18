@@ -20,7 +20,7 @@ One oracle query is an ordinary application of controlled-$`U`$,
 +|1\rangle\langle1|\otimes U.
 ```
 
-An uncontrolled application of $`U`$ uses one such query with the control in $`|1\rangle`$. Unknown powers, matrix entries, and conjugate oracles are not free resources.
+An uncontrolled application of $`U`$ uses one such query with the control in $`|1\rangle`$. Known integer powers reduce to $`I_4`$ or $`U`$ by parity, and inverse access uses the same oracle. Matrix entries and entrywise-conjugate oracles are not supplied.
 
 The target is
 
@@ -35,7 +35,7 @@ The target is
 where
 
 ```math
-\mathcal L_U=\operatorname{Ad}_U-\operatorname{Id},
+\mathcal L_U=\mathrm{Ad}_U-\mathrm{Id},
 \qquad
 t_k\geq0,
 \qquad
@@ -76,20 +76,20 @@ For one interval,
 \begin{aligned}
 e^{t\mathcal L_U}
 &=e^{-t}\sum_{n=0}^{\infty}\frac{t^n}{n!}
-\operatorname{Ad}_{U^n}\\
-&=\mathbb E_{N\sim\operatorname{Pois}(t)}
-\operatorname{Ad}_{U^N}.
+\mathrm{Ad}_{U^n}\\
+&=\mathbb E_{N\sim\mathrm{Pois}(t)}
+\mathrm{Ad}_{U^N}.
 \end{aligned}
 ```
 
 Expand each interval this way and keep the known controls in their prescribed order. The complete target is exactly the mixture over independent counts
-$`N_k\sim\operatorname{Pois}(t_k)`$ of those controlled trajectories.
+$`N_k\sim\mathrm{Pois}(t_k)`$ of those controlled trajectories.
 
 Their total jump count is
 
 ```math
 J=\sum_{k=1}^{r}N_k
-\sim\operatorname{Pois}(T).
+\sim\mathrm{Pois}(T).
 ```
 
 This distribution is independent of the number of intervals. One may sample $`J`$ first and then sample the interval counts conditionally from the multinomial distribution with probabilities $`t_k/T`$. Each trajectory requires at most $`J`$ unknown queries. The involution identity can reduce a run of repeated $`U`$ applications to its parity, which can only lower this count.
@@ -131,7 +131,7 @@ The required learning result is [Haah–Kothari–O'Donnell–Tang, Theorem 1.1]
 
 ```math
 \mathbb E\left[
-\|\operatorname{Ad}_V-\operatorname{Ad}_W\|_\diamond^2
+\|\mathrm{Ad}_V-\mathrm{Ad}_W\|_\diamond^2
 \right]\leq\zeta^2.
 ```
 
@@ -142,7 +142,7 @@ The expectation is over the estimation error. The oracle count is bounded. The s
 Use one supplied controlled-$`U`$ call to apply the eight-dimensional unitary
 
 ```math
-W=\operatorname{diag}(I_4,U).
+W=\mathrm{diag}(I_4,U).
 ```
 
 Run the learning procedure on auxiliary probes, keeping the unknown target input and its reference untouched. The known identity block will fix the otherwise undetermined global phase of the unitary estimate.
@@ -151,7 +151,7 @@ For a particular estimate $`V`$, write
 
 ```math
 \delta
-=\|\operatorname{Ad}_V-\operatorname{Ad}_W\|_\diamond.
+=\|\mathrm{Ad}_V-\mathrm{Ad}_W\|_\diamond.
 ```
 
 There is a scalar phase $`z`$ with
@@ -167,7 +167,7 @@ The algorithm does not need to know $`z`$ or $`\delta`$; they are used only to p
 Let $`V_{00}`$ be the upper-left four-dimensional block of $`V`$. Define
 
 ```math
-\alpha=\frac14\operatorname{Tr}V_{00},
+\alpha=\frac14\mathrm{Tr}V_{00},
 \qquad
 w=
 \begin{cases}
@@ -181,7 +181,7 @@ Let $`K`$ be the lower-right block of $`w^*V`$, and put
 ```math
 H=\frac{K+K^\dagger}{2},
 \qquad
-U'=\operatorname{sign}(H),
+U'=\mathrm{sign}(H),
 ```
 
 assigning sign $`+1`$ to zero eigenvalues. Every estimate produces a Hermitian involution $`U'`$.
@@ -218,7 +218,7 @@ Therefore
 Because $`3\delta<1`$ and the spectrum of $`U`$ is contained in $`\{-1,+1\}`$, every eigenvalue of $`H`$ lies within $`3\delta`$ of one of these two points, with the same sign. Consequently
 
 ```math
-\|\operatorname{sign}(H)-H\|_{\mathrm{op}}\leq3\delta,
+\|\mathrm{sign}(H)-H\|_{\mathrm{op}}\leq3\delta,
 ```
 
 and the claimed $`6\delta`$ estimate follows by the triangle inequality.
@@ -347,7 +347,7 @@ Use exactly $`N`$ noisy intervals of length $`\Delta`$. Each is followed by the 
 
 ```math
 \mathcal R_b(\rho_{SL})
-=\tau_b\otimes\operatorname{Tr}_S\rho_{SL},
+=\tau_b\otimes\mathrm{Tr}_S\rho_{SL},
 \qquad
 \tau_b=\frac{I+bZ}{2}.
 ```
@@ -376,7 +376,7 @@ e(b)=\sum_{k=1}^{\infty}
 \frac{b^{2k}}{(2k-1)(2k)}
 ```
 
-follows by integrating $`e'(b)=\operatorname{artanh}b`$. Its first coefficient is $`1/2`$ and all coefficients sum to $`\log2`$. Therefore
+follows by integrating $`e'(b)=\mathrm{artanh}b`$. Its first coefficient is $`1/2`$ and all coefficients sum to $`\log2`$. Therefore
 
 ```math
 \frac{b^2}{2}\leq e(b)\leq(\log2)b^2,
@@ -398,7 +398,7 @@ Then $`p_0\leq p<1/2`$, and the interval channel is exactly
 
 ```math
 e^{\Delta\mathcal L_{U_\theta}}
-=(1-p)\operatorname{Id}+p\operatorname{Ad}_{U_\theta}.
+=(1-p)\mathrm{Id}+p\mathrm{Ad}_{U_\theta}.
 ```
 
 Choose the same known input under both oracle hypotheses:
@@ -497,7 +497,7 @@ Consequently,
 ```math
 \begin{aligned}
 |f_b(\theta)^N-1|
-&\geq|\operatorname{Im}f_b(\theta)^N|\\
+&\geq|\mathrm{Im}f_b(\theta)^N|\\
 &=|f_b(\theta)|^N\sin(N\varphi)\\
 &\geq\frac34\sin(p_0/4)\\
 &>0.08.

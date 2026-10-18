@@ -34,7 +34,7 @@ The two Pauli terms anticommute, so $`U_\theta^\dagger=U_\theta`$ and $`U_\theta
 The generator is
 
 ```math
-\mathcal L_\theta=\operatorname{Ad}_{U_\theta}-\mathrm{Id}
+\mathcal L_\theta=\mathrm{Ad}_{U_\theta}-\mathrm{Id}
 =-\frac12[U_\theta,[U_\theta,\cdot]].
 ```
 
@@ -56,7 +56,7 @@ For $`0\leq b\leq1`$, let
 ```math
 \tau_b=\frac{I+bZ}{2},
 \qquad
-\mathcal R_b(\rho_{SL})=\tau_b\otimes\operatorname{Tr}_S\rho_{SL}.
+\mathcal R_b(\rho_{SL})=\tau_b\otimes\mathrm{Tr}_S\rho_{SL}.
 ```
 
 The target consists of $`N`$ intervals of duration $`\Delta>0`$, each followed by $`\mathcal R_b`$:
@@ -73,7 +73,7 @@ The involution identity gives
 
 ```math
 e^{\Delta\mathcal L_\theta}
-=(1-p)\mathrm{Id}+p\operatorname{Ad}_{U_\theta},
+=(1-p)\mathrm{Id}+p\mathrm{Ad}_{U_\theta},
 \qquad p=\frac{1-e^{-2\Delta}}2.
 ```
 
@@ -144,7 +144,7 @@ The product input $`I_S/2\otimes\rho_L`$ attains equality. Adding an untouched r
 E_{\mathrm{used}}=Ne(b).
 ```
 
-Differentiating $`e`$, expanding $`\operatorname{arctanh}b`$, and integrating gives
+Differentiating $`e`$, expanding $`\mathrm{arctanh}b`$, and integrating gives
 
 ```math
 e(b)=\sum_{k=1}^{\infty}
@@ -208,7 +208,7 @@ The lower inequality uses $`\arctan x\geq x/2`$ for $`0\leq x\leq1`$. Thus
 ```math
 \begin{aligned}
 |f_b(\theta)^N-1|
-&\geq|\operatorname{Im}f_b(\theta)^N|\\
+&\geq|\mathrm{Im}f_b(\theta)^N|\\
 &\geq(1-p/2)\sin(p/4)\\
 &\geq\frac34\sin(p_0/4)>0.08.
 \end{aligned}
@@ -232,7 +232,7 @@ Now $`f_0=1-2p\sin^2\theta`$ is real and positive. Using $`\sin\theta\geq2\theta
 
 This signal is a second-order change of logical dephasing at the baseline. Its finite separation does not require a nonzero first derivative.
 
-The witnesses have simple readout: measure $`X_L`$ in the zero-polarization case and $`Y_L`$ in the positive-polarization case. The latter expectation equals $`-\operatorname{Im}f_b^N`$. With equal priors and the corresponding decision rule, an expectation gap greater than $`0.08`$ gives success probability greater than $`1/2+0.08/4=0.52`$. No repetitions or retained outcome history are implicit.
+The witnesses have simple readout: measure $`X_L`$ in the zero-polarization case and $`Y_L`$ in the positive-polarization case. The latter expectation equals $`-\mathrm{Im}f_b^N`$. With equal priors and the corresponding decision rule, an expectation gap greater than $`0.08`$ gives success probability greater than $`1/2+0.08/4=0.52`$. No repetitions or retained outcome history are implicit.
 
 ## 5. Every real exposure time and every supplied budget
 
