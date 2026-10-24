@@ -115,7 +115,7 @@ This is a direct general simulation comparator. The present problem fixes an unk
 
 Boyang Chen, Minbo Gao, Xinzhao Wang, Shuo Zhou, **“Query-Optimal and Gate-Efficient Lindbladian Simulation,”** [arXiv:2609.18757v1](https://arxiv.org/html/2609.18757v1), 16 September 2026.
 
-The model and main result in Section 1.1 use a block encoding of the Hamiltonian and a projected unitary encoding of the stacked jump operator. The algorithm approximates the evolution in diamond norm with optimal query dependence on normalized time and precision; additional one- and two-qubit gates are linear in the query count up to polylogarithmic factors. The paper also treats Lipschitz-continuous time dependence with coherent time-indexed oracle access.
+The model and main result in Section 1.1 use a block encoding of the Hamiltonian and a projected unitary encoding of the stacked jump operator. The algorithm approximates the evolution in diamond norm with query dependence matching the general Hamiltonian lower bound for normalized time at least one; additional one- and two-qubit gates are linear in the query count up to polylogarithmic factors. The paper also treats Lipschitz-continuous time dependence with coherent time-indexed oracle access.
 
 This is another general simulation baseline. Its worst-case query optimality does not classify prescribed target interventions by their entropy-decrease capacity. The present theorem fixes the retained dimension and error and resolves that additional control resource for an ordinary unknown-reflection oracle.
 

@@ -23,6 +23,8 @@ The optional output path is chosen by the caller. The committed [expected result
 
 The reference environment is Python 3.12.14, NumPy 2.3.5, and SciPy 1.17.0. The two numerical packages are pinned in [requirements](../requirements.txt).
 
+The [repository sanity check](SANITY_CHECK.md) records the inspected revision, proof-review scope, reproduction results, navigation checks, and hosted mathematical rendering.
+
 ## What is checked
 
 | Calculation | Finite instances | Independent comparison |
