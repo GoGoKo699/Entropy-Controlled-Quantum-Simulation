@@ -540,8 +540,8 @@ Use
 ```math
 b=
 \begin{cases}
-0,&0\leq E<\log2,\\
-\sqrt{E/(N\log2)},&\log2\leq E<N\log2,\\
+0,&0\leq E\lt\log2,\\
+\sqrt{E/(N\log2)},&\log2\leq E\lt N\log2,\\
 1,&E\geq N\log2.
 \end{cases}
 ```

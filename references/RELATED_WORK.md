@@ -34,7 +34,7 @@ These are finite-distance channel and oracle-query statements. Their scope shoul
 | Relative-entropy contraction and quantum Pinsker | [Lindblad](#lindblad1975), [Watrous](#watrous2018) | Standard tools in the entropy estimate. |
 | Noncommutative uniform convexity | [Ricard–Xu](#ricard2016) | A standard alternative route to the dissipation estimate. |
 | Learning an unknown unitary in diamond distance | [Haah–Kothari–O'Donnell–Tang](#hkot2023) | The learning subroutine in the query upper bound. |
-| General Lindblad simulation | [Wang–Ye](#wang2026), [Borras–Marvian](#borras2026) | General access models and linear-time simulation baselines. |
+| General Lindblad simulation | [Wang–Ye](#wang2026), [Chen–Gao–Wang–Zhou](#chen2026simulation), [Borras–Marvian](#borras2026) | General access models and linear-time simulation baselines. |
 | Adaptive sensing with informative noise | [Wan–Lasenby](#wan2022), [Das–Górecki–Demkowicz-Dobrzański](#das2025), [Chen et al.](#chen2024) | Established sensitivity bounds and the noise-orientation QEC mechanism. |
 | Gauge resets and mixed gauge states | [Liu–Zhou](#liu2026) | Established recovery architecture and polarization-dependent logical signals. |
 | Weak-purity and dephasing-axis examples | [Cable–Gu–Modi](#cable2016), [Kukita–Matsuzaki–Kondo](#kukita2021) | Precedents that delimit the claims about the saturation examples. |
@@ -109,6 +109,15 @@ Chunhao Wang, Christopher Ye, **“Query-optimal quantum simulation of Lindblad 
 Theorem 1 provides a general Lindblad simulation algorithm with additive dependence on the evolution-time and precision terms. Its access model uses block encodings of Hamiltonian and jump operators, including controlled access and adjoints; the output is a channel approximated in diamond norm. The paper also treats time dependence.
 
 This is a direct general simulation comparator. The present problem fixes an unknown reflection oracle and asks how known target interventions with budget $`E`$ change the worst-case cost at fixed target dimension. A general worst-case time lower bound does not settle that restricted resource-dependent classification.
+
+<a id="chen2026simulation"></a>
+### Chen–Gao–Wang–Zhou (2026): query-optimal and gate-efficient simulation
+
+Boyang Chen, Minbo Gao, Xinzhao Wang, Shuo Zhou, **“Query-Optimal and Gate-Efficient Lindbladian Simulation,”** [arXiv:2609.18757v1](https://arxiv.org/html/2609.18757v1), 16 September 2026.
+
+The model and main result in Section 1.1 use a block encoding of the Hamiltonian and a projected unitary encoding of the stacked jump operator. The algorithm approximates the evolution in diamond norm with query dependence matching the general Hamiltonian lower bound for normalized time at least one; additional one- and two-qubit gates are linear in the query count up to polylogarithmic factors. The paper also treats Lipschitz-continuous time dependence with coherent time-indexed oracle access.
+
+This is another general simulation baseline. Its worst-case query optimality does not classify prescribed target interventions by their entropy-decrease capacity. The present theorem fixes the retained dimension and error and resolves that additional control resource for an ordinary unknown-reflection oracle.
 
 <a id="borras2026"></a>
 ### Borras–Marvian (2026): quantum-trajectory algorithms
@@ -204,7 +213,7 @@ It supplies another predecessor for enhanced measurement-parameter sensitivity a
 <a id="honma2026"></a>
 ### Honma–Vu (2026): thermodynamic uncertainty with quantum feedback
 
-Ryotaro Honma, Tan Van Vu, **“Thermodynamic Uncertainty Relation with Quantum Feedback,”** *Physical Review Letters* **137**, 160406 (16 October 2026), [DOI](https://doi.org/10.1103/6d8l-94pv). [Full Letter and Supplement, arXiv:2602.22651v1](https://arxiv.org/html/2602.22651v1).
+Ryotaro Honma, Tan Van Vu, **“Thermodynamic Uncertainty Relation with Quantum Feedback,”** *Physical Review Letters* **137**, 160406 (16 October 2026), [DOI](https://doi.org/10.1103/6d8l-94pv). [Full Letter and Supplement, arXiv:2602.22651v2](https://arxiv.org/html/2602.22651v2), revised 22 October 2026.
 
 Equation (15) bounds the relative variance of an antisymmetric monitored jump current. Its denominator is $`\Sigma=\Delta S_{\mathrm{sys}}+\Delta S_{\mathrm{env}}-\int dI`$, where $`dI`$ is the change in system-memory mutual information across feedback. The setup uses local-detailed-balance pairs of jumps and unital jump-conditioned feedback. It allows arbitrary initial states and durations; stationarity is not a distinguishing requirement.
 
